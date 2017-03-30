@@ -27,26 +27,26 @@ QSP ditulis dengan menggunakan [JSON](https://en.wikipedia.org/wiki/JSON "JSON -
 | &nbsp; &rdsh; `list`                               | Yes      | `Object`        | -           |         |
 | &nbsp; &nbsp; &nbsp; &rdsh; `pagination_url_param` | Yes      | `String`        | -           |         |
 | &nbsp; &nbsp; &nbsp; &rdsh; `selector`             | Yes      | `String`        | -           |         |
-| &nbsp; &nbsp; &nbsp; &rdsh; `url`                  | Yes      | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `name`                 | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `thumbnail`            | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `url`                  | Yes      | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `name`                 | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `thumbnail`            | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
 | &nbsp; &rdsh; `detail`                             | Yes      | `Object`        | -           |         |
-| &nbsp; &nbsp; &nbsp; &rdsh; `url`                  | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `name`                 | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `price`                | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `0`     |
-| &nbsp; &nbsp; &nbsp; &rdsh; `thumbnails`           | Optional | [`Object:field`](#parameter-type-object-field-)  | `Array`     | `[]`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `description`          | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `description_html`     | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `weight`               | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `0`     |
-| &nbsp; &nbsp; &nbsp; &rdsh; `condition`            | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `min_order`            | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `1`     |
-| &nbsp; &nbsp; &nbsp; &rdsh; `cat_1`                | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `cat_2`                | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `cat_3`                | Optional | [`Object:field`](#parameter-type-object-field-)  | `String`    | `""`    |
-| &nbsp; &nbsp; &nbsp; &rdsh; `sold`                 | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `0`     |
-| &nbsp; &nbsp; &nbsp; &rdsh; `views`                | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `0`     |
-| &nbsp; &nbsp; &nbsp; &rdsh; `rating`               | Optional | [`Object:field`](#parameter-type-object-field-)  | `Float`     | `0.0`   |
-| &nbsp; &nbsp; &nbsp; &rdsh; `rating_by`            | Optional | [`Object:field`](#parameter-type-object-field-)  | `Integer`   | `0`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `url`                  | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `name`                 | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `price`                | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `0`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `thumbnails`           | Optional | [`Object:field`](#parameter-type-objectfield)  | `Array`     | `[]`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `description`          | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `description_html`     | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `weight`               | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `0`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `condition`            | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `min_order`            | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `1`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `cat_1`                | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `cat_2`                | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `cat_3`                | Optional | [`Object:field`](#parameter-type-objectfield)  | `String`    | `""`    |
+| &nbsp; &nbsp; &nbsp; &rdsh; `sold`                 | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `0`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `views`                | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `0`     |
+| &nbsp; &nbsp; &nbsp; &rdsh; `rating`               | Optional | [`Object:field`](#parameter-type-objectfield)  | `Float`     | `0.0`   |
+| &nbsp; &nbsp; &nbsp; &rdsh; `rating_by`            | Optional | [`Object:field`](#parameter-type-objectfield)  | `Integer`   | `0`     |
 | &nbsp; &nbsp; &nbsp; &rdsh; `__alternate`          | Optional | `Array`         | -           | `0`     |
 
 
@@ -57,10 +57,10 @@ QSP ditulis dengan menggunakan [JSON](https://en.wikipedia.org/wiki/JSON "JSON -
 | `force_value`                         | Opitional | `String`                  | Pemaksaam hasil output. Apabila parameter ini diisi, maka CSS Selector akan diabaikan |
 | `selector`                            | Opitional | `String`                  | CSS Selector |
 | `exclude_selector`                    | Opitional | `Array`                   | Array CSS Selector yang di exclude |
-| `read`                                | Opitional | [`String:read`](#parameter-type-string-read-)             | - |
+| `read`                                | Opitional | [`String:read`](#parameter-type-stringread)             | - |
 | `temp_type_data`                      | Opitional | `String`                  | `"float"`, `"str"`, atau `"int"` |
-| `output_condition`                    | Opitional | [`Object:output_condition`](#parameter-type-object-output_condition-) | - |
-| `output_filter`                       | Opitional | [`Array:output_filter`](#parameter-type-array-output_filter-)     | - |
+| `output_condition`                    | Opitional | [`Object:output_condition`](#parameter-type-objectoutput_condition) | - |
+| `output_filter`                       | Opitional | [`Array:output_filter`](#parameter-type-arrayoutput_filter)     | - |
 
 ##### Parameter Type: `String:read`
 
