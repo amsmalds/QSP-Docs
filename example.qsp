@@ -1,0 +1,159 @@
+{
+    "name": "Bukalapak",
+    "base_url": [
+        "https://www.bukalapak.com/",
+        "https://bukalapak.com/"
+    ],
+    "update_date": "2017-03-19",
+    "author": "QloBOT Dev Team",
+    "author_url": "https://qlobot.com",
+    "patterns": {
+        "list": {
+            "pagination_url_param": "page=[page]",
+            "selector": ".product-display",
+            "url": {
+                "selector": ".product-description > h3 > a",
+                "read": "attr:href",
+                "output_filter": {
+                    "start_with": "https://www.bukalapak.com"
+                }
+            },
+            "name": {
+                "selector": ".product-description > h3 > a",
+                "read": "content"
+            },
+            "thumbnail": {
+                "selector": ".product-media img",
+                "read": "attr:data-src"
+            }
+        },
+        "detail": {
+            "name": {
+                "selector": "[data-content-name]",
+                "read": "attr:data-content-name"
+            },
+            "price": {
+                "selector": "[property='product:price:amount']",
+                "read": "attr:content"
+            },
+            "weight": {
+                "selector": ".qa-pd-weight-value",
+                "read": "content",
+                "temp_type_data": "float",
+                "output_filter": {
+                    "clear_text": [
+                        " ",
+                        "kilogram",
+                        "gram"
+                    ]
+                },
+                "output_condition": {
+                    "fold": {
+                        " gram": 1,
+                        " kilogram": 1000
+                    }
+                }
+            },
+            "description": {
+                "selector": ".qa-product-detail-description",
+                "read": "content",
+                "output_filter": {
+                    "replace": {
+                        "<br/>": "\n"
+                    },
+                    "remove_tags": true
+                }
+            },
+            "condition": {
+                "root": true,
+                "selector": "[property='twitter:data2']",
+                "read": "attr:content"
+            },
+            "thumbnails": {
+                "selector": ".c-product-image-gallery a.js-product-image-gallery__image",
+                "read": "attr:href"
+            },
+            "cat_1": {
+                "selector": "[itemtype='http://schema.org/BreadcrumbList'] li:eq(1) a [itemprop='name']",
+                "index": 0,
+                "read": "content"
+            },
+            "cat_2": {
+                "selector": "[itemtype='http://schema.org/BreadcrumbList'] li:eq(2) a [itemprop='name']",
+                "read": "content"
+            },
+            "cat_3": {
+                "selector": "[itemtype='http://schema.org/BreadcrumbList'] li:eq(3) a [itemprop='name']",
+                "read": "content"
+            },
+            "sold": {
+                "selector": ".c-deflist__value:eq(1)",
+                "read": "content"
+            },
+            "views": {
+                "selector": ".c-deflist__value:eq(2)",
+                "read": "content"
+            },
+            "rating": {
+                "selector": ".c-product-rating__value",
+                "read": "content"
+            },
+            "rating_by": {
+                "selector": ".c-product-rating__count span",
+                "read": "content"
+            },
+            "__alternate": [
+                {
+                    "description": {
+                        "selector": ".product-detailed__massive-text",
+                        "index": 0,
+                        "root": true,
+                        "read": "content",
+                        "output_filter": {
+                            "replace": {
+                                "<br/>": "\n"
+                            },
+                            "remove_tags": true
+                        }
+                    },
+                    "thumbnails": {
+                        "root": true,
+                        "selector": ".js-product-image-gallery-images a",
+                        "read": "attr:href"
+                    }
+                },
+                {
+                    "NOTE": "BL New Fucking Interface",
+                    "description": {
+                        "selector": ".qa-pd-description",
+                        "read": "content",
+                        "output_filter": {
+                            "replace": {
+                                "<br/>": "\n"
+                            },
+                            "remove_tags": true
+                        }
+                    },
+                    "weight": {
+                        "selector": ".qa-pd-weight-value",
+                        "read": "content",
+                        "temp_type_data": "float",
+                        "output_filter": {
+                            "clear_text": [
+                                " ",
+                                "kilogram",
+                                "gram"
+                            ]
+                        },
+                        "output_condition": {
+                            "fold": {
+                                " gram": 1,
+                                " kilogram": 1000
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
